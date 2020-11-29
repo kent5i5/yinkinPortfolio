@@ -1,0 +1,71 @@
+.bigposter{
+	background: url("https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/73513554_2937915762902754_8980034746234961920_o.jpg?_nc_cat=102&_nc_oc=AQlfL12TLB7V41dKpB3HbZZGw_E8NmFyYX_PLZbwoB_y_IO6HfPtKPG73pCL6iHaoPk&_nc_ht=scontent-lax3-2.xx&oh=e41c892a31ecfd1cfeab598c0c1b2703&oe=5E1E219E") no-repeat center center;
+	
+}
+
+.backlight{
+	font: Serif;
+	color:white;
+	background-blend-mode: lighten;
+	background-color: rgba(0,1,2,.2);
+	border-bottom-width: thin;
+}
+
+.self-portait {
+	border-radius: 4px;
+	
+}
+
+.paddin-left200px{
+
+	padding-left: 0px;
+	margin-left: 120px;
+}
+
+
+
+.paddingTop{
+	padding-top: 10px;
+}
+
+
+.margin20px{
+	margin-right: 20px;
+}
+
+.padding-botton100px{
+	padding-bottom: 100px;
+	text-orientation: sideways;
+}
+
+.bordertopnbutton {
+	border-style: solid;
+	border-top-color: darkgray;
+	border-bottom-color: turquoise;
+	border-left-color: darkgray;
+	border-right-color: aliceblue;
+}
+
+
+ /* Small devices (landscape phones, 600px and up) */
+@media (max-width: 576px) { 
+	.padding-botton100px{
+		padding-left: 0px;
+		width: 300px;
+		padding-bottom: 10px;
+	}
+	
+	
+	.paddingTop{
+		margin-left: 0;
+	}
+	
+	.paddin-left200px{
+		margin-left: 0;
+
+	}
+
+	/* .padding-left20px {
+		margin-left: 100px;
+	} */
+ }

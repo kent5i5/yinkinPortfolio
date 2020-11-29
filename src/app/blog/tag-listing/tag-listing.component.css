@@ -1,0 +1,17 @@
+.listing {
+	margin:10px;
+	border-style: ridge;
+	border-width: thin;
+
+}
+
+.tagLabel {
+	width: 80px;
+	min-width: 80px;
+	max-height: 24px;
+	margin-bottom: 2px; 
+	text-align: center; 
+	background-color: darkgrey; 
+	border-radius: 10px; 
+	opacity: 0.8;
+}

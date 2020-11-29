@@ -1,0 +1,14 @@
+.project {
+	
+	border-bottom: dotted 2px;
+	margin-bottom: 10px;
+}
+
+
+ /* Small devices (landscape phones, 600px and up) */
+@media (max-width: 576px) {
+	.sidemargin{
+		margin-right: 10px;
+		
+	}
+}

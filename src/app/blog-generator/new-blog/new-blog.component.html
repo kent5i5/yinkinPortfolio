@@ -1,0 +1,26 @@
+
+
+<div class="container">
+<form [formGroup]="newBlogForm" (ngSubmit)="newBlogForm.value" >
+	<p>new-blog </p>
+	
+	<div class="col-6"> Enter Title <input class="form-control" formControlName="title"> 
+	</div>
+
+	<div class="col-6"> Enter Author Name <input class="form-control" formControlName="author"> 
+	</div>
+
+	<div class="col-6">
+		Write Something! <input class="form-control" formControlName="content"> 
+	</div>
+
+	<div class="col-6"> tags <input class="form-control" formControlName="date">
+	 </div>
+
+	<div class="col-6">   pictures! <input class="form-control" formControlName="picture"> 
+	</div>
+
+	<button class="btn-primary btnStyle" type="submit">submit</button> 
+
+</form>
+</div>

@@ -1,0 +1,31 @@
+
+
+<div class="container">
+
+
+	<div class="row">
+
+		<div class="col-4"> Selected Tag:</div> <div class="col-6"> <div class="tagLabel" >{{ tagValue }}</div></div> 
+
+
+	</div>
+
+	<div class="row">
+		
+		 
+		 <div class="col-lg-8 listing" *ngFor="let blog of blogRef | async ">
+
+			<h4>Author: {{ blog.author }} </h4>
+			<p>{{ blog.createdDate.toDate()  | date:'yyyy/MM/dd h:mm:ss a'}}</p>
+			<div class="blogLINK" >
+				
+				<!-- <img class="blogBg img-fluid  text-center" [src]="blog.thumbnail"  > -->
+				<div> <h2> {{ blog.title }} </h2></div>
+
+			</div>
+			<a href="/blog/detail/{{blog.id}}"	>show</a>
+		 </div>
+			
+	</div>
+
+</div>

@@ -1,0 +1,29 @@
+.modal-dialog {
+  position: fixed;
+  float: right;
+  width: auto;
+  margin: 0.5rem;
+  pointer-events: none;
+}
+
+
+.floatingChat{position: fixed ; height: 60px; width: 60px; float: right; opacity: 0.8; border-style:ridge;
+  bottom: 64px;
+
+}
+
+@media screen and (max-width: 1112px) {
+	.floatingChat {
+    position: fixed;
+    margin-right: 10px;
+
+  }
+}
+
+@media (max-width: 576px) { 
+  .floatingChat {
+    position: relative;
+
+  }
+
+}

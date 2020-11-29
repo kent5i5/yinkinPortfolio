@@ -1,0 +1,46 @@
+<div class="container ">
+
+<div class="topnav" id="myTopnav">
+
+      <a class="" style="background-image: none;" href="http://yinkin.ziruoinc.com/">Yingkin</a>
+      <!-- <img [src]="" alt="Random second slide" class="img-fluid rounded mx-auto d-block">Yingkin -->
+		
+  <!-- <a href="#contact" class=" shadow-sm  mb-5 bg-white rounded-bottom">Aboutme</a> -->
+  <a href="/blog" class="">Blog</a> 
+  <a  href="/project" class="">Projects</a>
+  
+  <a  href="/resume">About</a>
+   
+  
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+
+   
+    <div *ngIf="fbuser  | async as user; else showLogin">
+     
+      <a  href="/admin">admin</a> <a href="/admin/{{user.email}}" style="" >{{user.email}}</a>
+      <button class="btn  btn-outline-primary my-2 " (click)="logout()">Logout</button>
+    </div>
+    
+    
+    <ng-template #showLogin>
+       <button class="btn  btn btn-outline-secondary my-2" (click)="login()">Login</button>
+     <!--  <button class="btn  btn-outline-primary my-2" id="quickstart-sign-in" (click)="open()">Sign up</button>
+ -->    </ng-template>
+
+	
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+<!--
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

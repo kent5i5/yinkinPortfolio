@@ -1,0 +1,21 @@
+<p>blog-generator works!</p>
+
+<div class="container">
+
+<form [formGroup]="newBlogForm" (ngSubmit)="newBlogForm.value" >
+
+	<div> <input class="form-control" formControlName="title"> </div>
+
+	<div> <input class="form-control" formControlName="author"> </div>
+
+	<div> <input class="form-control" formControlName="content"> </div>
+
+	<div> <input class="form-control" formControlName="date"> </div>
+
+	<div> <input class="form-control" formControlName="picture"> </div>
+
+	<button class="" type="submit">submit</button> 
+
+</form>
+
+</div> <!--  End of Container -->

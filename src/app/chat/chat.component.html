@@ -1,0 +1,91 @@
+<div class=""></div><!-- END OF MODAL -->
+<!-- <div class="modal custom fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog"> -->
+
+
+<div class="modal-header right">
+      <h4 class="modal-title">Message Me</h4>
+      <!-- <button type="btn" class="close" aria-label="Close" (click)=" updateMaxRoom()">
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+	</div>
+
+<div class="modal-body right" id="modal-container">
+
+				<div *ngIf="registeredUser == null" > 
+					<!-- <input class=" col-6" [value] = "name" (input) = "name = $event.target.value" placeholder="Enter your name here"> -->
+					
+				
+						<div> Enter your  email and leave me a message</div>
+							 <input type="text" [(ngModel)]="name">
+							<!-- input id="name" class="form-control" formControlName="name" required > -->
+							<div *ngIf="!name">
+					          Enter email/name
+					        </div>
+							
+							</div>
+							
+							
+
+				<div *ngIf="registeredUser || name"  id="userEmailCell" class="">Hello! {{ registeredUser }}
+				<button type="btn" class="close smallText" aria-label="Close" (click)=" updateMaxRoom()">
+       				 <span claas="" >End Session</span>
+				  </button>
+				</div>
+				
+						<table class="table table-hover table-light" id="messageTable">
+								<caption></caption>
+								<thead>
+									<tr>
+										<th scope="col"></th>
+		
+									</tr>
+							
+								</thead>
+								<tbody >
+										<!-- <td><div id="messageCell">THis is message cell {{ items | async | json }}</div></td> -->
+									<!--<tr>
+										<th scope="row">
+													<div class="msnCell" *ngFor="let message of messageList | async">
+												<div  style="float:left;background-color:snow; min-width: 200px;" *ngIf="message.Sender === registeredUser"> 
+												<p>{{message.Sender}} : {{ message.MessageBody}}</p></div>
+											<div  style="float:right;background-color: aliceblue;min-width: 150px;" *ngIf="message.Sender !== registeredUser"> {{ message.MessageBody }} : host</div> 
+											</div> </th>  .replace("\n", " ").replace('"', '') | json
+									</tr> -->
+									<tr> <div *ngIf="messageSended">Follow text is sended: {{textValue}} </div>  </tr>
+									
+								</tbody>
+							</table>
+
+					<div *ngIf="!messageSended">
+						<form [formGroup]="messageForm" (ngSubmit)="onSubmit(messageForm.value)">	
+
+							<textarea type="text" id="messageTextField" class="md-textarea form-control" rows="3" formControlName="textMessage" placeholder="Enter Message here." ></textarea>
+										<label ></label>
+								
+								<button type="submit" class="btn btn-primary "  >Send</button >
+						<a type="button" class="btn " (click)="reset()">Cancel</a>
+							
+						</form> 
+					</div> 
+			
+
+	<div class="col-12">
+	
+				
+				</div>
+
+</div> <!-- end of body-->
+
+
+<div class="modal-footer">
+
+	<div claas="smallText sessionid">Session id: {{roomNum}}</div> 
+	 <button type="btn" class="close smallText" aria-label="Close" (click)=" updateMaxRoom()">
+       				 <span claas="" >End Session</span>
+				  </button>
+
+	
+</div>
+
+

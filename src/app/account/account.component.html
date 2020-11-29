@@ -1,0 +1,92 @@
+
+<div class="modal-header">
+      <h4 class="modal-title">Welcome to My Blog</h4>
+      <button type="btn" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+	</div>
+<div class="modal-body">
+
+<h2>Account</h2>
+<p>{{topTitle}}</p>
+
+<!-- <div class="account-item" *ngFor="let accountInstant of accountList | async">
+  <span>{{ accountInstant.name }}</span>
+  <span>{{ accountInstant.password  }}</span>
+</div> -->
+
+
+
+  <div>
+    <div *ngIf=" isLoginPage " > 
+       <h3>{{title}}</h3>
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+       
+      <div>
+        <div>
+        <label for="email">Email:</label>
+        <input id="email" type="text" class="form-control" formControlName="email" >   
+     
+       <div>
+        <label for="password">Password:</label>
+        <input id="password" type="password" class="form-control" formControlName="password">  
+       </div>
+       
+        </div>
+        <label for="name">Name:</label>
+        <input id="name" type="text" class="form-control"  formControlName="name" autofocus placeholder="option">   
+       </div>
+    <button class="btn btn-success " type="submit">submit</button> 
+    <button type="button" class="btn btn-outline-secondary" (click)="reset()">Cancel</button>
+
+
+    </form>
+  </div>
+
+    <div class="account-item" *ngFor="let accountInstant2 of account ">
+
+      </div>
+
+      <div *ngIf="isRegisterPage " > 
+          <h5>{{title}} Please sign in with Email and password</h5>
+             <div class="userInfologo" *ngIf="fbuser | async as user">
+                <p> {{ user.email }}!</p>
+            </div>
+         <form [formGroup]="checkoutForm" (ngSubmit)="onRegister(checkoutForm.value)">
+
+      <div>
+        <div>
+        <label for="email">email</label>
+        <input id="email" type="text" class="form-control" formControlName="email" >   
+       </div>
+        <label for="name">name</label>
+        <input id="name" type="text" class="form-control"  formControlName="name" autofocus>   
+       </div>
+       <div>
+        <label for="password">password</label>
+        <input id="password" type="password" class="form-control" formControlName="password">  
+       </div>
+      
+    <button class="btn btn-success " type="submit">submit</button> 
+    <button type="button" class="btn btn-outline-secondary" (click)="reset()">Cancel</button>
+
+
+    </form>
+
+      </div>
+  
+
+  </div>
+
+
+
+
+</div> <!-- end of body-->
+
+
+	
+<div class="modal-footer">
+    <div><a href=""></a>Create/Login with a user account</div>
+    <!-- <button type="button" class="btn btn-outline-secondary" (click)="reset()">Cancel</button> -->
+    <!-- <button type="button" class="btn btn-danger" (click)="modal.close('Ok click')">Ok</button> -->
+  </div>

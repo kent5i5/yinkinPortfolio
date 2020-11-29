@@ -1,0 +1,44 @@
+<!-- <li *ngFor="let blog of blogRef$ | async"
+			[class.selected]="blog.author === selectedAuthor">
+			<a [routerLink]="['/blog', blog.author]" routerLinkActive="router-link-active" ]>
+				<span class="badge">{{ blog.author }}</span>{{ blog.title }}
+			</a>
+
+		 </li>  -->
+
+
+<div class="container">
+ <div class="row ">
+	<div class="col-lg-6" *ngFor="let blog of blogRef | async">
+		<div class="blogLINK">
+			
+		<img class="blogBg" [src]="blog.thumbnail"  >
+			<div class="thumbnailContent">
+				<h2>{{ blog.title }} </h2> 
+					<h5>Author: {{ blog.author }} </h5>
+					<!-- <p>{{blog.createdDate}}</p> -->
+				<a href="/blog/detail/{{blog.id}}"	>		
+					show
+				</a>
+			</div>
+		
+		<!-- <p>{{blog.content}}</p> -->
+
+	</div>
+	
+	</div>
+	
+	
+	<!-- <button class="btn" (click)="getNext()">load next 4</button>
+	<div *ngIf ='loadmore'>
+	
+  </div> -->
+  
+  
+  </div> 
+
+</div>
+
+
+
+<div></div>

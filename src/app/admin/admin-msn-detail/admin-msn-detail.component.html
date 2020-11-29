@@ -1,0 +1,38 @@
+
+	
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-6">
+			<div class="paddingleftpx">Messages: {{ id }}</div>
+			<ul class="msnlist">
+				<li *ngFor="let message of messageList | async">
+					<span class="badge">{{ message.MessageBody | json}}
+					</span>{{ message.Sender | json}}
+					<button class="float-rightbutton" (click)="deleteMessage(message.key)">x</button>
+				</li>
+	
+	
+	
+			</ul>
+
+		</div>
+		
+		<div class="col-6">
+				<form [formGroup]="adminform" (ngSubmit)="onSubmit(adminform .value)">	
+
+							<textarea type="text" id="messageTextField" rows="3" class="form-control" formControlName="myMessage" placeholder="Enter Message here."></textarea>
+										
+								
+							<button  class="btn btn-primary" type="submit" >Send</button >
+						    <a type="button" class="btn " (click)="reset()">Cancel</a>
+							
+				</form>
+
+		</div>
+	
+	</div>		
+	<!-- <a href="/admin">go back</a> -->
+
+</div>

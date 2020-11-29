@@ -1,0 +1,30 @@
+.responsive {
+   width: 100%;
+  height: auto;
+
+}
+
+.picsum-img-wrapper{
+  width: 1000px;
+}
+
+img {
+ 
+}
+
+.margin10{
+  margin: 10px 10px 10px 10px;
+}
+
+.paddingleft{
+ padding: 0%;
+}
+
+.slite{
+
+  image-rendering: pixelated;
+  block-size: 0cm;
+  width:700px;
+  height:800px;
+  
+}

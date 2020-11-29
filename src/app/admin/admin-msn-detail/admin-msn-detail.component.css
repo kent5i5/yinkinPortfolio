@@ -1,0 +1,23 @@
+
+.paddingleftpx{
+	padding-left: 100px;
+}
+
+.float-rightbutton{
+	float: right;
+	border-block-start-width: 0ch;
+}
+
+.msnlist li {
+  position: relative;
+  cursor: pointer;
+  /* background-color: aquamarine; */
+  /* background-image: url("https://s3-us-west-2.amazonaws.com/yinkin.ziruoinc.com/images/instant-messaging-icon.gif"); */
+  margin: 0em;
+  padding: .3em 0;
+  /* height: 1.6em; */
+  border-radius: 4px;
+  border-color: currentColor;
+  border-width: thin;
+  border-style: groove;
+}

@@ -1,0 +1,42 @@
+
+
+<div class="container">
+	
+	<div class="row">
+		<div class="main" *ngIf="blogRef">
+			<div> <h1> {{ (blogRef | async)?.title }} </h1></div>
+			<h4>Author: {{ (blogRef | async)?.author }} </h4>
+			<p>{{ (blogRef | async)?.createdDate.toDate()  | date:'yyyy/MM/dd h:mm:ss a'}}</p>
+			<div class="blogLINK" >
+				
+			<img class="blogBg img-fluid  text-center" [src]="(blogRef | async)?.thumbnail"  >
+				<div class="thumbnailContent">
+					<div>
+						<p *ngFor=" let content of (blogRef | async)?.content">{{ content  }} </p> 
+						
+					</div>	
+				</div>
+
+			</div>
+			
+
+			<div class="blogFooter">
+				<p>{{ (blogRef | async)?.createdDate.toDate()  | date:'yyyy/MM/dd h:mm:ss a'}}</p>
+			</div>
+		</div>
+
+		<div class="side" style="float:right;">
+
+			<div class="blogSidebar" >
+				<h5>Tags</h5>
+		
+				<div class="tagStyle" style=" " *ngFor=" let tag of (blogRef | async)?.tags">
+					<a href="/blog/tag/{{tag}}">{{ tag }}</a></div>
+				<div style=" ">
+					
+
+			</div>
+
+		</div>
+	</div>	
+</div>

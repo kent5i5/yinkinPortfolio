@@ -1,0 +1,66 @@
+
+
+<div class="container">
+
+
+<div class="row padding-left20px ">
+	<div class="col-6 text-center" *ngIf=" fbuser | async as user">
+				<div class="userInfologo ">Welcome  {{ user.email }} </div>
+	</div>
+</div>
+	<div class="row ">
+	
+	
+		<div class="col-4 myBox">
+			<div class="padding-left20px">Rooms:</div>
+			<ul class="msnlist">
+				
+				<!--  (click)="onSelectMessage(room.RoomId)"-->
+				<li  *ngFor="let room of Rooms | async"  >
+					<button class="col-1-4 custombutton" (click)="deleteRoom(room.key)">X</button>
+					<a class="col-1-4" routerLink="room/{{room.RoomId}}">
+						<span class="badge">
+						Room ID {{ room.RoomId | json}}</span></a>	
+					<p>{{ room.RoomCreator | json }}</p>
+						
+					<button class="col-1-4  show" (click)="onSelectMessage(room.RoomId)">>>></button>  
+					
+					<div class="col-1-4  timestampstyle">Timestamp:{{ room.Date | json}}</div>
+				</li>
+			</ul>
+	
+	
+		</div>
+	
+	
+		<div class="col-6 ">
+	
+			<div *ngIf="selectedRoom">
+				Room {{ selectedRoom }} is selected
+				</div>
+			
+			
+			<!-- <app-admin-msn-detail [key]="helloName"></app-admin-msn-detail> -->
+			<div class="col-6">
+			<div class="paddingleftpx">Messages: {{ id }}</div>
+			<ul class="msnlist">
+				<li *ngFor="let message of messageList | async">
+					<span class="badge">{{ message.MessageBody | json}}
+					</span> - {{ message.Sender | json}}
+					<button class="float-rightbutton" (click)="deleteMessage(message.key)">x</button>
+				</li>
+	
+	
+	
+			</ul>
+			
+
+		</div>
+	
+		
+		</div>
+	</div>
+	<!-- <div class="row"></div> -->
+
+
+</div>
