@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-
+import { MarkdownService } from 'ngx-markdown';
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
@@ -14,7 +14,7 @@ export class BodyComponent implements OnInit {
   linkedin = 'https://s3-us-west-2.amazonaws.com/yinkin.ziruoinc.com/images/linkedin-logo24x24.png';
   
   constructor(
-    
+
     config: NgbCarouselConfig
   ) {
 

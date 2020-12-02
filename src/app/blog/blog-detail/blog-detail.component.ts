@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Action } from 'rxjs/internal/scheduler/Action';
 import { map } from 'rxjs/operators';
 import { BackendService } from '../../backend.service';
+import { MarkdownService } from 'ngx-markdown';
 
 @Component({
   selector: 'app-blog-detail',
@@ -17,12 +18,13 @@ export class BlogDetailComponent implements OnInit {
   //blogDocument: AngularFirestoreDocument<Blog>;
 
   blogRef: Observable<Blog>;
-   BlogId: string; 
+  BlogId: string; 
 
   constructor(
     private fbackend : BackendService,
     //private afs: AngularFirestore,
     private route: ActivatedRoute,
+    private markdownService: MarkdownService,
   ) {
     this.BlogId = this.route.snapshot.paramMap.get('id');
       //this.blogDocument = this.afs.doc<Blog>("blog/"+this.BlogId);
@@ -35,7 +37,15 @@ export class BlogDetailComponent implements OnInit {
   ngOnInit() {
     //  let timestamp: TimeInterval = 1541764115618
     // let date = Date(timeIntervalSince1970: timestamp)
-   
+  
+    // this.markdownService.renderer.html = () =>{
+    //   const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+    //   return '<h>' +
+    //            '<a name="' + escapedText + '" class="anchor" href="#' + escapedText + '">' +
+    //              '<span class="header-link"></span>' +
+    //            '</a>' 
+    //          '</h>';
+    // }
   }
 
   
