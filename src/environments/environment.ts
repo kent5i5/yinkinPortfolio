@@ -3,8 +3,23 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: true,
+
+  firebase: {
+     apiKey: "AIzaSyA0DHzeITlexYRPlWRHFHsqEPUzF1ALYDI",
+    authDomain: "yinkinchat.firebaseapp.com",
+    databaseURL: "https://yinkinchat.firebaseio.com",
+    projectId: "yinkinchat",
+    storageBucket: "yinkinchat.appspot.com",
+    messagingSenderId: "670581837450",
+    appId: "1:670581837450:web:cf3b581faf45835d"
+  }
 };
+
+// export const firebaseConfig = {
+   
+// };
+
 
 /*
  * For easier debugging in development mode, you can import the following file
