@@ -9,7 +9,7 @@ import { BlogGeneratorComponent } from './blog-generator/blog-generator.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TagListingComponent } from './tag-listing/tag-listing.component';
 
-import { MarkdownModule } from 'ngx-markdown';
+//import { MarkdownModule } from 'ngx-markdown';
 
 
 @NgModule({
@@ -25,7 +25,7 @@ import { MarkdownModule } from 'ngx-markdown';
     BlogRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MarkdownModule.forChild(),
+    //MarkdownModule.forChild(),
     //AngularFireAuthModule, // this is necessary for additional module to work if auth instant is declare within module
   ]
 })

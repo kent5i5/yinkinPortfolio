@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { MarkdownService } from 'ngx-markdown';
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',

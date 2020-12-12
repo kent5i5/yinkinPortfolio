@@ -1,14 +1,14 @@
 .bigposter{
-	background: url("https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/73513554_2937915762902754_8980034746234961920_o.jpg?_nc_cat=102&_nc_oc=AQlfL12TLB7V41dKpB3HbZZGw_E8NmFyYX_PLZbwoB_y_IO6HfPtKPG73pCL6iHaoPk&_nc_ht=scontent-lax3-2.xx&oh=e41c892a31ecfd1cfeab598c0c1b2703&oe=5E1E219E") no-repeat center center;
-	
+
 }
 
 .backlight{
 	font: Serif;
-	color:white;
+	/* color:white; */
 	background-blend-mode: lighten;
-	background-color: rgba(0,1,2,.2);
+	/* background-color: rgba(0,1,2,.2); */
 	border-bottom-width: thin;
+	text-align: center;
 }
 
 .self-portait {

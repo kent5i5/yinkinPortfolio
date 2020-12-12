@@ -28,8 +28,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 
-import { MarkdownModule } from 'ngx-markdown';
-
+//import { MarkdownModule } from 'ngx-markdown';
+import { NgxMdModule } from 'ngx-md';
 
 @NgModule({
   declarations: [
@@ -53,7 +53,8 @@ import { MarkdownModule } from 'ngx-markdown';
     FormsModule,
     BlogModule,
     
-    MarkdownModule.forRoot(),
+    NgxMdModule.forRoot(),
+    //MarkdownModule.forRoot(),
     
     AngularFireModule.initializeApp(environment.firebase, 'yinkin-app'),
 	  AngularFirestoreModule,

@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Action } from 'rxjs/internal/scheduler/Action';
 import { map } from 'rxjs/operators';
 import { BackendService } from '../../backend.service';
-import { MarkdownService } from 'ngx-markdown';
+//import { MarkdownService } from 'ngx-markdown';
 
 @Component({
   selector: 'app-blog-detail',
@@ -24,7 +24,7 @@ export class BlogDetailComponent implements OnInit {
     private fbackend : BackendService,
     //private afs: AngularFirestore,
     private route: ActivatedRoute,
-    private markdownService: MarkdownService,
+    //private markdownService: MarkdownService,
   ) {
     this.BlogId = this.route.snapshot.paramMap.get('id');
       //this.blogDocument = this.afs.doc<Blog>("blog/"+this.BlogId);
