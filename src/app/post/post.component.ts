@@ -12,9 +12,9 @@ export class PostComponent implements OnInit {
   private sub: Subscription;
   post: string;
   private _jsonURL = 'assets/SampleJson.json';
-  private links;
-  private listOflinks
-  private id
+  public  links;
+  public  listOflinks
+  public  id
 
   constructor(private route: ActivatedRoute) {
     console.log('Reading local json files');
