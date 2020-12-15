@@ -1,0 +1,43 @@
+<div class="container" >
+
+
+	<div class="row project">
+
+		
+		
+		<div class="col-md-10">
+                
+
+           
+                <!-- <div id="dismiss">
+                    <i class="fas fa-arrow-left"></i>
+                </div> -->
+                <!-- <div class="sidebar-header">
+                    <h5>Data engineering</h5>
+                </div> -->
+              
+            <div class="" *ngIf="!id" style=" padding: 10px">
+              
+                <div *ngFor="let link of links">
+                    <div class=""  > 
+                    <a href="http://localhost:4200/data_engineering/{{link.link}}" style="padding: 4px" >
+                        {{link.title}}</a>
+                        <span class="badge badge-secondary badge-pill" >{{link.time}}</span>
+                    </div> 
+          
+                </div>
+            </div>
+   
+        </div>
+        
+        <div class="col-md-10">
+            <div  style="padding: 12px">
+			<!-- to load from remote URL -->
+            <ngx-md [path]="post"></ngx-md>
+            </div>       
+        </div>
+
+       
+    </div>
+</div>
+

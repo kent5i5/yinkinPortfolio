@@ -30,6 +30,7 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
 
 //import { MarkdownModule } from 'ngx-markdown';
 import { NgxMdModule } from 'ngx-md';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { NgxMdModule } from 'ngx-md';
     BodyComponent,
     ResumeComponent,
     ProjectComponent,
+    PostComponent,
 	
   ],
   imports: [
@@ -67,6 +69,8 @@ import { NgxMdModule } from 'ngx-md';
       { path: 'chat', component: ChatComponent },
       { path: 'resume', component: ResumeComponent },
       { path: 'project', component: ProjectComponent },
+      { path: 'data_engineering', component: PostComponent },
+      { path: 'data_engineering/:id', component: PostComponent,pathMatch: 'full' },
     ])
   ],
   providers: [AuthService,AngularFireAuthGuard, AngularFirestore ],

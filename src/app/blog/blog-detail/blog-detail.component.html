@@ -3,6 +3,7 @@
 <div class="container">
 	
 	<div class="row">
+		
 		<div class="main" *ngIf="blogRef">
 			<div> <h1> {{ (blogRef | async)?.title }} </h1></div>
 			<h4>Author: {{ (blogRef | async)?.author }} </h4>
@@ -12,8 +13,11 @@
 			<img class="blogBg img-fluid  text-center" [src]="(blogRef | async)?.thumbnail"  >
 				<div class="thumbnailContent">
 					<div>
-						<p *ngFor=" let content of (blogRef | async)?.content">{{ content  }} </p> 
 						
+						<ngx-md *ngFor=" let content of (blogRef | async)?.content">
+
+							{{ content  }} 
+						</ngx-md>
 					</div>	
 				</div>
 

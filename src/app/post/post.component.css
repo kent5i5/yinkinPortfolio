@@ -1,0 +1,47 @@
+#sidebar {
+    width: 250px;
+    position: relative;
+    margin-top: 1px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+    background: #ffffff;
+    color: rgb(8, 2, 2);
+    transition: all 0.3s;
+    opacity: 0.9;
+    margin-right: 1px;
+}
+
+.sidebar-header{
+    text-align: center;
+
+}
+
+li{
+    max-width: 180px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #sidebar {
+        margin-left: 0;
+        padding-left: 0;
+        width: 120px;
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 999;
+        background: #ffffff;
+        color: #fff;
+        transition: all 0.3s;
+        display: inline;
+        background-blend-mode: difference;
+    }
+
+    li{
+        max-width: 100px;
+        display: inline;
+    }
+}
